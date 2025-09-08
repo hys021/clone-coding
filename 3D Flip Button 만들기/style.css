@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px; /*수치가 작으면 작을 수록 더 원근감을 느낄 수 있음, 3D를 사용하는 요소의
+    상위 요소에 perspective 작성*/
+}
+
+.flip-btn {
+    width: 200px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px; /*텍스트가 한 줄일 때 요소의 height = line-height 이면 수직 중앙 정렬*/
+    transform-style: preserve-3d;
+    transition: .5s; /* 0.5초의 간격을 두고 회전시켜 입체감을 줌 */
+    cursor: pointer;
+}
+
+/* hover를 이용해 마우스 올릴 시 블록이 아래로 회전 */
+.flip-btn:hover{
+    transform: rotateX(-90deg);
+}
+
+.front {
+    background-color: goldenrod;
+    height: 100px;
+    transform: translateZ(50px);
+}
+
+.back {
+    background-color: darkgoldenrod;
+    height: 100px;
+    transform: rotateX(90deg) translateZ(150px);
+}

@@ -6,7 +6,7 @@
 
 ## ✅ 진행 현황
 - [x] 타이핑 효과 랜딩 페이지
-- [ ] 3D Flip Button
+- [x] 3D Flip Button
 - [ ] HTML5와 CSS3를 이용한 나만의 웹페이지 만들기
 - [ ] 계산기 만들기
 
